@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Group label="" x="0" y="0">
+	<Group label="" x="0" y="0">
+		<Circle label="contourVisage" x="0" y="0" color="Black" r="200" />
+		<Circle label="nez" x="0" y="0" color="Magenta" r="74" />
+		<Group label="oreilles" x="0" y="210">
+			<Group label="oreille" x="-210" y="0">
+				<Circle label="c1" x="0" y="0" color="Black" r="100" />
+				<Circle label="c2" x="0" y="0" color="Magenta" r="70" />
+			</Group>
+			<Group label="oreille2" x="210" y="0">
+				<Circle label="c1" x="0" y="0" color="Black" r="100" />
+				<Circle label="c2" x="0" y="0" color="Magenta" r="70" />
+			</Group>
+		</Group>
+		<Group label="oreilles (Copy)" x="0" y="-210">
+			<Group label="oreille (Copy)" x="-210" y="0">
+				<Circle label="c1 (Copy)" x="0" y="0" color="Black" r="100" />
+				<Circle label="c2 (Copy)" x="0" y="0" color="Magenta" r="70" />
+			</Group>
+			<Group label="oreille2 (Copy)" x="210" y="0">
+				<Circle label="c1 (Copy)" x="0" y="0" color="Black" r="100" />
+				<Circle label="c2 (Copy)" x="0" y="0" color="Magenta" r="70" />
+			</Group>
+		</Group>
+	</Group>
+</Group>
