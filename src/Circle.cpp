@@ -23,14 +23,14 @@ void Circle::toXML(pugi::xml_node& target) const {
     target.append_attribute("r").set_value(radius);
 }
 
-void Circle::render(vector<sf::Shape*>& shapes, const CoordinateMap<Shape>& coordinates) {
-    sf::CircleShape* circle = new sf::CircleShape(getRadius());
+void Circle::render(sf::RenderWindow& target, const CoordinateMap<Shape>& coordinates) {
+    sf::CircleShape circle(getRadius());
     const auto& coords = coordinates[this];
-    circle->setPosition(coords.x-getRadius(), coords.y-getRadius());
+    circle.setPosition(coords.x-getRadius(), coords.y-getRadius());
 
-    circle->setFillColor(getColor().toSFML());
+    circle.setFillColor(getColor().toSFML());
 
-    shapes.push_back(circle);
+    target.draw(circle);
 }
 
 bool Circle::renderImGuiComponents(CoordinateMap<Shape>& coordinates) {

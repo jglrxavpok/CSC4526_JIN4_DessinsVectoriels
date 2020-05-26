@@ -23,6 +23,12 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(sfml)
 
+# Permet d'avoir une macro WSL
+# Vraiment pas nécessaire pour faire fonctionner dans des conditions normales
+if (CMAKE_SYSTEM_NAME STREQUAL "Linux" AND CMAKE_HOST_SYSTEM_VERSION MATCHES "Microsoft")
+    add_definitions(-DWSL)
+endif()
+
 add_subdirectory(mainLauncher)
 add_subdirectory(src)
 add_subdirectory(unitTests)

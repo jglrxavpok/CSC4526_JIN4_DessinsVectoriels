@@ -31,7 +31,7 @@ protected:
 public:
     explicit Shape(ShapeType type, string label, int x, int y): type(type), label(std::move(label)), x(x), y(y) {};
 
-    virtual void render(vector<sf::Shape*>& shapes, const CoordinateMap<Shape>& coordinates) = 0;
+    virtual void render(sf::RenderWindow& target, const CoordinateMap<Shape>& coordinates) = 0;
 
     virtual bool renderImGuiComponents(CoordinateMap<Shape>& coordinates) = 0;
 

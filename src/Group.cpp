@@ -52,9 +52,9 @@ void Group::computeAbsolute(CoordinateMap<Shape>& coordinates, int absoluteX, in
     }
 }
 
-void Group::render(vector<sf::Shape*>& shapes, const CoordinateMap<Shape>& coordinates) {
+void Group::render(sf::RenderWindow& target, const CoordinateMap<Shape>& coordinates) {
     for(const auto& child : getElements()) {
-        child->render(shapes, coordinates);
+        child->render(target, coordinates);
     }
 }
 

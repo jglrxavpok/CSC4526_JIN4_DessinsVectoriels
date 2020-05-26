@@ -16,7 +16,7 @@ public:
     explicit Circle(string label, int x, int y, int radius, Color color);
     explicit Circle(pugi::xml_node node);
 
-    void render(vector<sf::Shape*> &shapes, const CoordinateMap<Shape>& coordinates) override;
+    void render(sf::RenderWindow& target, const CoordinateMap<Shape>& coordinates) override;
     bool renderImGuiComponents(CoordinateMap<Shape>& coordinates) override;
     unique_ptr<Shape> clone() override;
     void toXML(pugi::xml_node& target) const override;

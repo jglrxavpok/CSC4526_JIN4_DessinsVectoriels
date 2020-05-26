@@ -17,7 +17,7 @@ public:
     explicit Group(pugi::xml_node node);
 
     void computeAbsolute(CoordinateMap<Shape>& coordinates, int absoluteX = 0, int absoluteY = 0) const;
-    void render(vector<sf::Shape*> &shapes, const CoordinateMap<Shape>& coordinates) override;
+    void render(sf::RenderWindow& target, const CoordinateMap<Shape>& coordinates) override;
     bool renderImGuiComponents(CoordinateMap<Shape>& coordinates) override;
     unique_ptr<Shape> clone() override;
     void toXML(pugi::xml_node& target) const override;
